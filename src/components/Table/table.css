@@ -1,0 +1,105 @@
+.table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  border-style: solid;
+  border-color: lightgray;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.table-title {
+  background-color:#EC1666;
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.5vh;
+  font-weight: bold;
+  border-color: #EC1666 !important;
+  border: solid;
+ }
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 50%;
+  height: auto;
+  min-height: 100px;
+}
+
+.last-row {
+  border-bottom: none;
+}
+
+.first-row {
+  background-color:#EC1666;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vh;
+  font-weight: bold;
+  min-height: 75px;
+}
+
+.cell-label {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: auto;
+  width: 35%;
+  min-height: 100px;
+  font-weight: bold;
+  padding-left: 20px;
+  word-break: break-all;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.cell-value {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: auto;
+  width: 65%;
+  min-height: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  word-break: break-all;
+  padding-bottom: 10px;
+}
+
+.cell-complete {
+  width: 100%;
+}
+
+.cell-complete .cell-value{
+  width: 100%;
+}
+
+@media only screen and (min-device-width: 320px)
+and (max-device-width: 844px)
+and (orientation: landscape) {
+  .table-title {
+    font-size: 3vh;
+  }
+}

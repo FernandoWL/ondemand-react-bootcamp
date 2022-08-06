@@ -1,0 +1,96 @@
+.productview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: auto;
+  margin-top: 50px;
+  background-color: white;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: lightgray;
+  padding: 1vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  padding: 10px;
+}
+
+.productview-label {
+  background-color:#EC1666;
+  color: white;
+  border-style: solid;
+  border-radius: 10px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px;
+  padding: 20px;
+  font-size: 3vh;
+  font-weight: bold;
+ }
+
+.productview-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.productview-carousel .image-gallery-slide > .image-gallery-image {
+  max-height: 350px !important;
+  height: auto;
+}
+
+.productview-carousel .image-gallery-thumbnail.active, .image-gallery-thumbnail:hover, .image-gallery-thumbnail:focus {
+  border: 4px solid #EC1666 !important;
+}
+
+.productview-carousel .image-gallery-bullets .image-gallery-bullet.active:hover {
+  background: #EC1666 !important;
+  border: 1px solid #EC1666 !important;
+}
+
+.productview-carousel .image-gallery-bullets .image-gallery-bullet:hover {
+  background: #EC1666 !important;
+  border: 1px solid #EC1666 !important;
+}
+
+.productview-button-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.productview-button {
+  border-color: lightgray;
+  border-style: solid;
+  border-radius: 10px;
+  border-style: none;
+  min-height: 20px;
+  min-width: auto;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.productview-button:hover:enabled {
+  background-color:#EC1666;
+  transition: 0.3s;
+  color: white;
+}
+
+.productview-button-container span {
+  color: #EC1666;
+}
+
+@media only screen and (min-device-width: 320px)
+and (max-device-width: 844px)
+and (orientation: landscape) {
+  .productview-label {
+    font-size: 4vh;
+  }
+}

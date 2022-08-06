@@ -1,0 +1,41 @@
+.featured {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 25vh;
+}
+
+.featured-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  gap: 40px 40px ;
+}
+
+.featured-div {
+  margin: 20px;
+}
+
+.featured-button {
+  border-color: lightgray;
+  border-style: solid;
+  border-radius: 10px;
+  border-radius: 10px;
+  border-style: none;
+  min-height: 20px;
+  min-width: auto;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.featured-button:hover {
+   background-color:#EC1666;
+   transition: 0.3s;
+   color: white;
+}

@@ -10,6 +10,7 @@ export function useFeaturedBanners() {
   }));
 
   useEffect(() => {
+    let cancel = false;
     if (!apiRef || isApiMetadataLoading) {
       return () => {};
     }
@@ -18,7 +19,7 @@ export function useFeaturedBanners() {
 
     async function getFeaturedBanners() {
       try {
-        setFeaturedBanners({ data: {}, isLoading: true });
+        !cancel && setFeaturedBanners({ data: {}, isLoading: true });
 
         const response = await fetch(
           `${API_BASE_URL}/documents/search?ref=${apiRef}&q=${encodeURIComponent(
@@ -30,9 +31,9 @@ export function useFeaturedBanners() {
         );
         const data = await response.json();
 
-        setFeaturedBanners({ data, isLoading: false });
+        !cancel && setFeaturedBanners({ data, isLoading: false });
       } catch (err) {
-        setFeaturedBanners({ data: {}, isLoading: false });
+        !cancel && setFeaturedBanners({ data: {}, isLoading: false });
         console.error(err);
       }
     }
@@ -40,6 +41,7 @@ export function useFeaturedBanners() {
     getFeaturedBanners();
 
     return () => {
+      cancel = true;
       controller.abort();
     };
   }, [apiRef, isApiMetadataLoading]);

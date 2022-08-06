@@ -1,0 +1,29 @@
+.carticon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.carticon-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #ec1666 !important;
+  background-color: #ec1666;
+  color: white;
+  font-size: 1vh;
+  padding: 3px;
+  min-height: 10px;
+  min-width: 10px;
+  font-weight: bold;
+}
+
+@media only screen and (min-device-width: 320px)
+and (max-device-width: 844px)
+and (orientation: landscape) {
+  .carticon-badge {
+    font-size: 2vh;
+  }
+}
